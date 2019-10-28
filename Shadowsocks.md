@@ -1,0 +1,38 @@
+# Shadowsocks
+
+##  https://www.alpharacks.com/myrack/clientarea.php
+
+##  OS: debian-8.0-x86_64
+
+```shell
+1  apt-get update
+
+2  apt-get install python-setuptools && easy_install pip
+
+3  pip install shadowsocks
+
+4  vi /etc/ssservice.json
+
+5  wget --no-check-certificate https://github.com/91yun/uml/raw/master/lkl/install.sh && bash install.sh
+
+6  ifconfig 
+
+7  ssserver -c /etc/ssservice.json -d start
+
+8  ps -ef|grep ssserver
+
+9  history
+
+10  cat /etc/ssservice.json 
+
+11  {
+      "server":"0.0.0.0",
+      "local_port":1080,
+      "port_password":{
+        "9010":"123321",
+        "9020":"123321"
+      },
+      "method":"aes-256-cfb",
+      "timeout":600
+    }
+```
